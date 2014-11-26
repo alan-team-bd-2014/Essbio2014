@@ -9,7 +9,9 @@ session_start();
 
     <link href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/shift.css" rel="stylesheet">
     <link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
-    <link rel="stylesheet" href="css/otro_sumidero.css">
+    <link rel="stylesheet" href="css/fondo.css">
+    <link rel="stylesheet" href="css/btnAvisoAlerta.css">
+    <link rel="stylesheet" href="css/navigation.css">
     
   </head>
 
@@ -37,14 +39,14 @@ session_start();
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <a href="mi_alerta.php">
+                    <a href="otro_alerta.php">
                         <div class="btn">
                             <h1>Alerta</h1>
                         </div>
                     </a>
                 </div>
                 <div class="col-md-6">
-                    <a href="mi_aviso.php">
+                    <a href="otro_aviso.php">
                         <div class="btn">
                             <h1>Aviso</h1>
                         </div>

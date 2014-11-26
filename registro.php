@@ -5,21 +5,23 @@
 
     <link href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/shift.css" rel="stylesheet">
     <link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
-    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/fondo.css">
+    <link rel="stylesheet" href="css/btnStatic.css">
+    <link rel="stylesheet" href="css/navigation.css">
+    
+    
     
   </head>
 
   <body>
+    
     <div class="nav nav-pills">
       <div class="container">
         <ul class="pull-left">
-          <li class="active"><a href="#">Info </a></li>
-          <!--<li><a href="#">Mapa </a></li>-->
         </ul>
         <ul class="pull-right">
-          <li><a href="#">Inicia sesion </a></li>
-          <li><a href="#">Registrate </a></li>
-          <li><a href="#">Guia </a></li>
+           <li class="active"><a href="#">Info </a></li>
+          <li><a href="registro.php">Guia </a></li> 
         </ul>
       </div>
     </div>
@@ -42,7 +44,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="btn">
-                      <form name="registro" action="verificar_registro.php" method="POST" >  
+                      <form name="registro" action="verificar/verificar_registro.php" method="POST" >  
                           <li>Rut:</li><li><input ng-change="" type="text" name="rut" /></li>  
                 <li>Nombre:</li><li><input type="text" name="nombre" /></li>  
                 <li>Apellido:</li><li><input type="text" name="apellido" /></li>  

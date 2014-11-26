@@ -30,5 +30,5 @@ function randIdSumidero(){
     $result = pg_query($query) or die('El registro fallo: ' . pg_last_error());
     echo "Insert Alerta";
     
-  
+    header('Location: index.html');
 ?>

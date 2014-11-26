@@ -16,7 +16,9 @@ echo "Favorite animal is " . $_SESSION["pwd"] . ".";
 
     <link href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/shift.css" rel="stylesheet">
     <link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
-    <link rel="stylesheet" href="css/welcome_usuario.css">
+    <link rel="stylesheet" href="css/fondo.css">
+    <link rel="stylesheet" href="css/btnAvisoAlerta.css">
+    <link rel="stylesheet" href="css/navigation.css">
     
   </head>
 
@@ -29,7 +31,7 @@ echo "Favorite animal is " . $_SESSION["pwd"] . ".";
         </ul>
         <ul class="pull-right">
             <li><a href="welcome_usuario.php">Home </a></li>
-            <li><a href="logOut.php">Log Out </a></li>
+            <li><a href="verificar_logOut.php">Log Out </a></li>
           <li><a href="#">Profile</a></li>
         </ul>
       </div>

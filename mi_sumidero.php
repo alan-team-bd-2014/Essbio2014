@@ -9,7 +9,9 @@ session_start();
 
     <link href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/shift.css" rel="stylesheet">
     <link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
-    <link rel="stylesheet" href="css/mi_sumidero.css">
+    <link rel="stylesheet" href="css/fondo.css">
+    <link rel="stylesheet" href="css/btnAvisoAlerta.css">
+    <link rel="stylesheet" href="css/navigation.css">
     
   </head>
 
