@@ -10,11 +10,10 @@ function randIdSumidero(){
     }
     
     $id_mensaje = randIdSumidero();
-    $problema =$_POST["problema"];
-    $descripcion= $_POST["comment"];
+    $descripcion = $descripcion = $_POST["comment"];
     $fechaActual = date("Y/m/d");
     date_default_timezone_set("America/Santiago");
-    $horaActual = date("h:i:sa");
+    $horaActual = date("h:i:sa");;
     
     $usuario = $_SESSION["usuario"];
     $contra =$_SESSION["pwd"];
@@ -27,7 +26,7 @@ function randIdSumidero(){
     $datosUsuario = pg_fetch_row($result1);
     echo "datosUsuario";
     
-    $query = "INSERT INTO essbio.alerta VALUES($id_mensaje,'$problema',null,'$descripcion',NOW(),NOW(),$datosUsuario[5],$datosUsuario[0])";
+    $query = "INSERT INTO essbio.aviso VALUES ($id_mensaje,'$descripcion',NOW(),NOW(),$datosUsuario[5],$datosUsuario[0])";
     $result = pg_query($query) or die('El registro fallo: ' . pg_last_error());
     echo "Insert Alerta";
     
