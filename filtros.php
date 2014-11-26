@@ -21,6 +21,10 @@
 			$result = pg_query($query) or die('La consulta fallo: ' . pg_last_error());
 
 			echo "<table>\n";
+			echo"\t<tr>\n";
+				echo"\t<td><strong>ID sumidero</strong></td>\n";
+				echo"\t<td><strong>tipo problema</strong></td>\n";
+			echo"\t</tr>\n";
 			while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
     			echo "\t<tr>\n";
     			foreach ($line as $col_value) {
@@ -39,6 +43,10 @@
 			$result = pg_query($query) or die('La consulta fallo: ' . pg_last_error());
 
 			echo "<table>\n";
+			echo"\t<tr>\n";
+				echo"\t<td><strong>ID problema</strong></td>\n";
+				echo"\t<td><strong>tipo problema</strong></td>\n";
+			echo"\t</tr>\n";
 			while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
     			echo "\t<tr>\n";
     			foreach ($line as $col_value) {
@@ -64,6 +72,10 @@
 			$result = pg_query($query) or die('La consulta fallo: ' . pg_last_error());
 
 			echo "<table>\n";
+			echo"\t<tr>\n";
+				echo"\t<td><strong>Sector</strong></td>\n";
+				echo"\t<td><strong>problemas</strong></td>\n";
+			echo"\t</tr>\n";
 			while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
     			echo "\t<tr>\n";
     			foreach ($line as $col_value) {
@@ -88,6 +100,10 @@
 			$result = pg_query($query) or die('La consulta fallo: ' . pg_last_error());
 
 			echo "<table>\n";
+			echo"\t<tr>\n";
+				echo"\t<td><strong>Ciudadano</strong></td>\n";
+				echo"\t<td><strong>Alertas </strong></td>\n";
+			echo"\t</tr>\n";
 			while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
     			echo "\t<tr>\n";
     			foreach ($line as $col_value) {
@@ -109,6 +125,11 @@
 			$result = pg_query($query) or die('La consulta fallo: ' . pg_last_error());
 
 			echo "<table>\n";
+			echo"\t<tr>\n";
+				echo"\t<td><strong>ID sumidero</strong></td>\n";
+				echo"\t<td><strong>calle</strong></td>\n";
+				echo"\t<td><strong>N°</strong></td>\n";
+			echo"\t</tr>\n";
 			while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
     			echo "\t<tr>\n";
     			foreach ($line as $col_value) {
