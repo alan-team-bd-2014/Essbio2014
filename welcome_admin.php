@@ -5,8 +5,11 @@
 
         <link href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/shift.css" rel="stylesheet">
         <link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
+        
+        <link rel="stylesheet" href="css/navigation.css">
+        <link rel="stylesheet" href="css/fondo.css">
         <link rel="stylesheet" href="css/sumidero.css">
-
+           
     </head>
 
     <body>
@@ -46,7 +49,7 @@
                                 for($i = 0; $i < $sizeSector; $i++){
                                     $aSector = pg_fetch_row($resultSector);
                                 echo"<div class='sector'>
-                                    <h2>Sector:$aSector[0]</h2>
+                                    <a><h2>Sector:$aSector[0]</h2></a>
                                     <div>";
                                 
                                     $querySistema = "SELECT s.num_sistema FROM essbio.sistema as s WHERE s.num_sector = '$aSector[0]' ";
@@ -58,7 +61,7 @@
                                         echo"
                                          <div class='sistema'>
                                             
-                                            <h3>Sistema:$aSistema[0]</h3>
+                                            <a><h3>Sistema:$aSistema[0]</h3></a>
                                             <div>
                                                 <ul>";
                                             $querySumidero = "SELECT s.id_sumidero FROM essbio.sumidero as s WHERE s.num_sistema = '$aSistema[0]'";
