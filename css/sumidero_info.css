@@ -6,22 +6,49 @@
 
 #feed{
 
-    height:200px;
+    height:500px;
     border:3px solid blue;
     }
     #avisos{
-        height:30px;
+        height:400px;
         border:2px solid green;
     }
+    
     #alertas{
-        height:30px;
+        height:300px;
         border:2px solid orange;
     }
     #responsables{
-        height:30px;
-        border:2px solid cyan;
+        height:300px;
+        border:2px solid brown;
+        
     }
-
+    #avisos .scroll{
+        width:350px;
+        height:400px;
+        overflow:scroll;
+        background-color:green;
+        color:#714D03;
+        border:4px double green;
+    }
+    #alertas .scroll{
+        width:350px;
+        height:400px;
+        overflow:scroll;
+        background-color:orange;
+        color:#714D03;
+        border:4px double orange;
+    }
+    #responsables .scroll{
+        width:350;
+        height:400px;
+        overflow:scroll;
+        background-color:brown;
+        color:#714D03;
+        border:4px double brown;
+    }
+    
+    
 
 .nav{
     height:57px;

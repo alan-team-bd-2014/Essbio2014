@@ -58,14 +58,20 @@
                                     <h1>Responsables</h1>
                                 </div>
                                 <div id="alertas" class="col-md-4">
-                                    
+                                    <div>
+                                        <div class="scroll">
+                                        </div>
+                                    </div>
                                 </div>
                                 <div id="avisos" class="col-md-4">
-                                    
+                                    <div class="scroll">
+                                    </div>
                                 </div>
                                 <div id="responsables" class="col-md-4">
-                                    
+                                    <div class="scroll">
+                                    </div>
                                 </div>
+                                
 
                             </div>
                         </div>
