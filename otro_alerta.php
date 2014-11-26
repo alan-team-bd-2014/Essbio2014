@@ -9,7 +9,9 @@ session_start();
 
     <link href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/shift.css" rel="stylesheet">
     <link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
-    <link rel="stylesheet" href="css/mi_alerta.css">
+    <link rel="stylesheet" href="css/fondo.css">
+    <link rel="stylesheet" href="css/btnStatic.css">
+    <link rel="stylesheet" href="css/navigation.css">
     
   </head>
 
@@ -42,7 +44,7 @@ session_start();
                 <div class="col-md-6">
                         <div class="btn">
                             <h2>Registra tu alerta!</h2>
-                            <form method="POST" action="verificar_alerta.php">
+                            <form method="POST" action="verificar_otro_alerta.php">
                                 <ul>
                                     <?php
                                     
@@ -54,11 +56,12 @@ session_start();
                                     $result1 = pg_query($query1) or die('El registro fallo: ' . pg_last_error());
                                    
                                     $sizeResult1 = pg_num_rows($result1);
+                                    
                                     echo"\t<li><label for='comment' >Sistema</label>\n
-                                    <select id='alertaProblema' name='problema' >";
+                                    <select id='alertaProblema' name='sistema' >";
                                     echo"<option value=''>Sistemas</option>
                                         <option value='--Any--'>--Any--</option>";
-                                    $sector = $_POST["problema"];
+                                    
                                     
                                     $i=0;
                                     while( $i<$sizeResult1)
@@ -75,10 +78,9 @@ session_start();
                                    
                                     $sizeResult2 = pg_num_rows($result2);
                                     echo"\t<li><label for='comment' >Sumidero</label>\n
-                                    <select id='alertaProblema' name='problema' >";
+                                    <select id='alertaProblema' name='sumidero' >";
                                     echo"<option value=''>Sumideros</option>
                                         <option value='--Any--'>--Any--</option>";
-                                    $sector = $_POST["problema"];
                                     
                                     $i=0;
                                     while( $i<$sizeResult2)
@@ -90,7 +92,15 @@ session_start();
                                     }
                                     echo"</select></li>";
                                     
-                                    echo"<li><label for='comment' >Describe en mas detalle el problema!</label></li>
+                                    echo"
+                                    <li><label for='tipo_problema' >Tipo Problema</label><li>
+                                    <li><select id='alertaProblema' name='tipo_problema'>
+                                        <option value=''>Problema</option>
+                                        <option value='--Any--'>--Any--</option>
+                                        <option value='Obstrucion'>Obstruccion</option>
+                                        <option value='Alcantarilla'>Alcantarilla</option>
+                                    </select></li>
+                                    <li><label for='comment' >Describe en mas detalle el problema!</label></li>
                                     <li><textarea name='comment' rows='5' cols='40'></textarea></li>    
                                     <li><input type='submit' /></li>";
                                     ?>
