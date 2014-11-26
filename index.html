@@ -44,12 +44,12 @@
                 <div class="col-md-4">
                     <div class="btn">
                         <h3>Inicia Sesion</h3>
-                        <form method="GET" action="verificar_usuario.php">
+                        <form method="POST" action="verificar_usuario.php">
                             <ul>
                                 <li><label for="usuario" >Usuario</label></li>
-                                <li><input id="usuario" class="text"></li>
-                                <li><label for="pass" >Constrasenia</label></li>
-                                <li><input id="pass" class="text"></li>
+                                <li><input type= "textbox" value="" name= "usuario"/> </li>
+                                <li><label for="pass" name="pass" >Constrasenia</label></li>
+                                <li><input type= "password" value="" name= "pwd"/></li>
                                 <li><input type="submit" /></li> 
                             </ul>
                         </form>
