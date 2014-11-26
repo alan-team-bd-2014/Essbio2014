@@ -23,6 +23,8 @@
       
     }
     
+    header('Location: index.html');
+    
 ?>
 <?php
 function validaRut($rut){
