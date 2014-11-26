@@ -10,23 +10,14 @@
     $num_calle =$_POST["num_calle"];
     $admin_cod =$_POST["admin_cod"];
     $id_sumidero= 1101;
-    $direccion = $calle . " " . $num_calle;
-
-    /*
-    EL SISTEMA DEBE CONFIRMAR LOS VALORES:
-    POR CONFIRMAR: 
-        contrastar con los rut de la base de datos
-        admin_cod para ver si el usuario nuevo es un administrador
-        la calle es importantisima de chekear, porque debera contrastarla con las calles de los sumideros,
-        en caso de hacer match con alguno se le asigna ese id_sumidero al usuario
-
-    */
+    
+    
     $dbconn = pg_connect("host=plop.inf.udec.cl port=5432 dbname=BDI-g user=BDI-7 password=bdi7")
     or die('No se ha podido conectar: ' );  
 
     if( $clave == $clave_confirm){
 
-        $query = "INSERT INTO essbio.ciudadano VALUES ($rut, '$nombre', '$apellido', '$email', $clave, $id_sumidero, '$calle', $admin_cod, $calle)";
+        $query = "INSERT INTO essbio.ciudadano VALUES ($rut, '$nombre', '$apellido', '$email', $clave, 20179503, '$calle',$admin_cod, 155)";
   
         $result = pg_query($query) or die('El registro fallo: ' . pg_last_error());   
       

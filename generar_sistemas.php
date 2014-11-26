@@ -39,21 +39,22 @@
     
         for($j =0; $j < 5; $j++){
             $nombreSistema = $i . "." . $j;
+            $puntoDescarga = rand_puntoDescarga($i);
             $query =    "INSERT INTO essbio.sistema (num_sistema, num_sector, nombre_sistema, punto_descarga) 
-                        VALUES ($count_sistema, $i, '$nombreSistema', 'rand_puntoDescarga($i)')";
+                        VALUES ($count_sistema, $i, '$nombreSistema', '$puntoDescarga')";
   
         	$result = pg_query($query) or die('El registro fallo: ' . pg_last_error()); 
-        	
         	for($z=0 ; $z<10;$z++){
-        		$calle = $nombreSistema.".".$z;
-        		$nroCalle = $calles[$z] + randNroCalle();
+        		$calle = $nombreSistema;
+        		$randNro = rand(0,99);
+        		$nroCalle = $calles[$z] + $randNro;
+        		$idSumidero =randIdSumidero();
         		
         		$query =    "INSERT INTO essbio.sumidero (id_sumidero, estado, num_sistema, calle, nro_calle) 
-                        	VALUES (randIdSumidero(), 'sin problemas', $count_sistema, $calle, $nroCalle )";
+                        	VALUES ($idSumidero, 'sin problemas', $count_sistema , '$calle', $nroCalle )";
   
         	$result = pg_query($query) or die('El registro fallo: ' . pg_last_error()); 
         	} 
-
         //$randSector = rand(1,4);
         echo" Sector: ";
         echo($i);
@@ -65,7 +66,7 @@
         echo(rand_puntoDescarga($i));
         echo "<br>";
 
-        $count++;
+        $count_sistema++;
         }
     } 
          

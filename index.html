@@ -2,7 +2,7 @@
 <html>
 
   <head>
-  
+
     <link href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/shift.css" rel="stylesheet">
     <link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
     <link rel="stylesheet" href="index.css">
@@ -14,11 +14,11 @@
       <div class="container">
         <ul class="pull-left">
           <li class="active"><a href="#">Info </a></li>
-          <li><a href="#">Mapa </a></li>
+          <!--<li><a href="#">Mapa </a></li>-->
         </ul>
         <ul class="pull-right">
           <li><a href="#">Inicia sesion </a></li>
-          <li><a href="#">Registrate </a></li>
+          <li><a href="registro.php">Registrate </a></li>
           <li><a href="#">Guia </a></li>
         </ul>
       </div>
@@ -36,22 +36,29 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <div class="btn">
-                        <h3>Registrate</h3>
-                        <p>Ayuda a tu comunidad a mantener limpia las calles</p>
+                    <div>
+                        
                     </div>
                     
                 </div>
                 <div class="col-md-4">
                     <div class="btn">
-                        <h3>Registrate</h3>
-                        <p>Ayuda a tu comunidad a mantener limpia las calles</p>
+                        <h3>Inicia Sesion</h3>
+                        <form method="GET" action="login.php">
+                            <ul>
+                                <li><label for="usuario" >Usuario</label></li>
+                                <li><input id="usuario" class="text"></li>
+                                <li><label for="pass" >Constrasenia</label></li>
+                                <li><input id="pass" class="text"></li>
+                                <li><input type="submit" /></li> 
+                            </ul>
+                        </form>
+                        <a href="registro.php">registro</a>
+                        <a href=""></a>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="btn">
-                        <h3>Registrate</h3>
-                        <p>Ayuda a tu comunidad a mantener limpia las calles</p>
+                    <div >
                     </div>
                 </div>
             </div>
