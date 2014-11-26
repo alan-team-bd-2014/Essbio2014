@@ -1,3 +1,8 @@
+<?php
+// Start the session
+session_start();
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -5,7 +10,7 @@
 
     <link href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/shift.css" rel="stylesheet">
     <link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="css/index.css">
     
   </head>
 
@@ -48,7 +53,7 @@
                             <ul>
                                 <li><label for="usuario" >Usuario</label></li>
                                 <li><input type= "textbox" value="" name= "usuario"/> </li>
-                                <li><label for="pass" name="pass" >Constrasenia</label></li>
+                                <li><label for="pass" name="pwd" >Constrasenia</label></li>
                                 <li><input type= "password" value="" name= "pwd"/></li>
                                 <li><input type="submit" /></li> 
                             </ul>

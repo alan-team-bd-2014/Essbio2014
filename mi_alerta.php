@@ -9,7 +9,7 @@ session_start();
 
     <link href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/shift.css" rel="stylesheet">
     <link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
-    <link rel="stylesheet" href="css/mi_sumidero.css">
+    <link rel="stylesheet" href="css/mi_alerta.css">
     
   </head>
 
@@ -36,20 +36,31 @@ session_start();
         <div id="botones">
         <div class="container">
             <div class="row">
-                <div class="col-md-6">
-                    <a href="mi_alerta.php">
-                        <div class="btn">
-                            <h1>Alerta</h1>
-                        </div>
-                    </a>
+                <div class="col-md-3">
+                    
                 </div>
                 <div class="col-md-6">
-                    <a href="mi_aviso.php">
                         <div class="btn">
-                            <h1>Aviso</h1>
+                            <h2>Registra tu alerta!</h2>
+                            <form method="POST" action="verificar_mi_alerta.php">
+                                <ul>
+                                    <li><label for="comment" >Tipo Problema</label></li>
+                                    <li><select id="alertaProblema" name="problema" >
+                                        <option value="">Problema</option>
+                                        <option value="--Any--">--Any--</option>
+                                        <option value="Obstrucion">Obstruccion</option>
+                                        <option value="Alcantarilla">Alcantarilla</option>
+                                    </select></li>
+                                    <li><label for="comment" >Describe en mas detalle el problema!</label></li>
+                                    <li><textarea name="comment" rows="5" cols="40"></textarea></li>    
+                                    <li><input type="submit" /></li> 
+                                </ul>
+                            </form>
                         </div>
-                    </a>
-                    </div>
+                </div>
+                <div class="col-md-3">
+                    
+                </div>
                 </div>
             </div>
         </div>

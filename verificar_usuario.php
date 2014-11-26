@@ -1,4 +1,16 @@
+<?php
+// Start the session
+session_start();
+?>
+
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<?php
+// Set session variables
+$_SESSION["usuario"] = $_POST["usuario"];
+$_SESSION["pwd"] = $_POST["pwd"];
+echo "Session variables are set.";
+?>
+    
 <?php
 
 
@@ -17,11 +29,17 @@ $dbconn = pg_connect("host=plop.inf.udec.cl port=5432 dbname=BDI-g user=BDI-7 pa
 			
 	
 	if($num >0){
-	echo "Bienvenido $usuario";}
-	else 
+        echo "Bienvenido $usuario"; header('Location: welcome_usuario.php');}
+	else {
+                header('Location: index.html');
 		echo "usuario y/o contraseña incorrecta";
 	
+        }
+            
 	}
-	else echo "La contraseña sólo puede contener números";
+	else{
+            header('Location: index.html');
+            echo "La contraseña sólo puede contener números";
+        }
 ?>
 

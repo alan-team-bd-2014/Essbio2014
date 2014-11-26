@@ -1,0 +1,92 @@
+.nav{
+    height:57px;
+    background-color:#0A0A66;
+    border-bottom: 2px solid #0066FF;
+    }
+.nav .container{
+    margin-top:3px
+}
+.nav a {
+  color: #0066FF;
+  font-size: 17px;
+  font-family:  sans-serif,'League Gothic',FrutigerLTStd-LightCn, Arial;
+  font-weight: bold;
+  margin-top:50px;
+  padding:20px 15px;
+  text-transform: uppercase;
+}
+
+.nav a:hover{
+        
+        color:white;
+        text-decoration:none;
+        background-color:#0066FF;
+    }
+
+.nav li {
+  display: inline;
+}
+
+
+.btn{
+    background-color:#0066FF;
+    padding-left:30px;
+    height:300px;
+    width:500px;
+    border:2px solid #0A0A66;
+    text-align:left;
+    }
+.btn h1{
+    margin-top:70px;
+    
+}
+
+.btn:hover{
+        border:5px solid #0A0A66;
+    }
+
+.jumbotron {
+  background-image:url('http://launionmc.files.wordpress.com/2014/04/essbio.jpg?w=550&h=352');
+  height: 600px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.jumbotron .container {
+  position: relative;
+  top:40px;
+}
+
+.jumbotron h1 {
+  color: #fff;
+  font-size: 48px;  
+  font-family: 'Shift', sans-serif;
+  font-weight: bold;
+}
+
+.jumbotron h2 {
+  color: #fff;
+  font-size: 34px;  
+  font-family: 'Shift', sans-serif;
+  font-weight: bold;
+}
+
+.jumbotron p {
+  font-size: 20px;
+  color: #fff;
+}
+
+
+.learn-more {
+  background-color: #f7f7f7;
+}
+
+.learn-more h3 {
+  font-family: 'Shift', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.learn-more a {
+  color: #00b0ff;
+}
