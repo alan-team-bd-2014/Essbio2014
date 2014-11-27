@@ -8,9 +8,9 @@ session_start();
     <head>
         <link href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/shift.css" rel="stylesheet">
         <link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
-        <link rel="stylesheet" href="css/fondo.css">
-        <link rel="stylesheet" href="css/btnStatic.css">
         <link rel="stylesheet" href="css/navigation.css">
+        <link rel="stylesheet" href="css/btnStatic.css">
+        <link rel="stylesheet" href="css/fondo.css">
         <title></title>
     </head>
     <body>
@@ -28,20 +28,9 @@ session_start();
         </div>
         <div class="jumbotron">
             <div class="container">
-                <?php
-// remove all session variables
-                session_unset();
 
-// destroy the session 
-                session_destroy();
-
-                
-                    echo"
-                        <h1>Gracias por tu ayuda!</h1>
-                        <h2>Eres de gran necesidad para mantener esta hermosa ciudad mas limpia!</h2>
-                        ";
-                
-                ?>
+                <h1>El sitio todavia esta en construccion!</h1>
+                <h2>Mienstras! disfruta del resto de la pagina</h2>
                 <div id='botones'>
                     <div class='container'>
                         <div class='row'>
@@ -58,6 +47,7 @@ session_start();
                     </div>
                 </div>
             </div>
+
         </div>
         <div class="learn-more">
             <div class="container">
@@ -68,13 +58,10 @@ session_start();
                         <p>Pagina Principal.</p>
 
                     </div >
-
                 </div>
             </div>
         </div>
-    </div>
 
-</body>
+
+    </body>
 </html>
-
-

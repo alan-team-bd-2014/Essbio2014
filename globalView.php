@@ -2,9 +2,10 @@
 <html>
 
     <head>
-        
+
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script src="js/globalView.js"></script>
+        <script src="js/sumidero-info.js"></script>
         <!--<link href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/shift.css" rel="stylesheet">-->
         <link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
 
@@ -22,7 +23,15 @@
                     <!--<li><a href="#">Mapa </a></li>-->
                 </ul>
                 <ul class="pull-right">
-                    <li><a href="sumideros.php">globalview </a></li>
+                    <li class="dropdown">
+                        <a href="globalView.php" class="dropdown-toggle">globalview <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a class="sec">Sectores</a></li>
+                            <li><a class="sis">Sistemas</a></li>
+                            <li><a class="sum">Sumideros</a></li>
+                            
+                        </ul>
+                    </li>
                     <li><a href="consulta.php">Consultas </a></li>
                     <li><a href="problemas.php">problemas</a></li>
                     <li><a href="filtros.php">Filtros</a></li>
@@ -51,7 +60,7 @@
                                 for ($i = 0; $i < $sizeSector; $i++) {
                                     $aSector = pg_fetch_row($resultSector);
                                     echo"<div class='sector'>
-                                    <a><h2>Sector:$aSector[0]</h2></a>
+                                    <h2>Sector:$aSector[0]</h2>
                                     <div>";
 
                                     $querySistema = "SELECT s.num_sistema FROM essbio.sistema as s WHERE s.num_sector = '$aSector[0]' ";
@@ -63,7 +72,7 @@
                                         echo"
                                          <div class='sistema'>
                                             
-                                            <a><h3>Sistema:$aSistema[0]</h3></a>
+                                            <h3>Sistema:$aSistema[0]</h3>
                                             <div>
                                                 <ul>";
                                         $querySumidero = "SELECT s.id_sumidero FROM essbio.sumidero as s WHERE s.num_sistema = '$aSistema[0]'";
@@ -72,12 +81,10 @@
 
                                         for ($k = 0; $k < 6; $k++) {
                                             $aSumidero = pg_fetch_row($resultSumidero);
-                                            echo"   <div class='sumidero'>
-                                                        <a class='pagina_sumidero'>
+                                            echo"   <a href='sumidero_info.php' class='sum' method='POST' name='sumidero' val='$aSumidero[0]' ><div class='sumidero'>
                                                             <div class='cuad'></div>
                                                             <p><var>$aSumidero[0]</var></p>
-                                                        </a>
-                                                    </div>";
+                                                    </div></a>";
                                         }
                                         echo"</ul>
                                             </div>
@@ -122,6 +129,6 @@
                 </div>
             </div>
         </div>-->
-        
+
     </body>
 </html>

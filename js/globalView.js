@@ -1,7 +1,12 @@
 var main = function(){
-    $('.sumidero').click(function() {
+    $('.dropdown-toggle').click(function(){
+        $('.dropdown-menu').toggle();
+    });
+    $('.sec').click(function(){
         $.post( "sumidero_info.php" );
     });
+    
+    
 };
             
          

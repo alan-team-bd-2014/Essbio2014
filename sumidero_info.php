@@ -1,4 +1,10 @@
 <!DOCTYPE html>
+
+<?php
+$idSumidero = $_POST["sumidero"];
+
+echo($idSumidero);
+?>
 <html>
 
     <head>
@@ -17,7 +23,7 @@
                     <!--<li><a href="#">Mapa </a></li>-->
                 </ul>
                 <ul class="pull-right">
-                    <li><a href="sumideros.php">Sumideros </a></li>
+                    <li><a href="globalView.php.php">globalview </a></li>
                     <li><a href="consulta.php">Consultas </a></li>
                     <li><a href="problemas.php">problemas</a></li>
                     <li><a href="filtros.php">Filtros</a></li>
@@ -58,10 +64,19 @@
                                     <h1>Responsables</h1>
                                 </div>
                                 <div id="alertas" class="col-md-4">
-                                    <div>
-                                        <div class="scroll">
+
+                                    <div class="scroll">
+
+                                        <div class="subAlert">
+                                            <div id="tipo-problema" class="col-md-5"><p>tipo problema</p></div>
+                                            <div id="fecha" class="col-md-3"><p>fecha</p></div>
+                                            <div id="visto" class="col-md-2"><p>visto</p></div>
+
                                         </div>
+
+
                                     </div>
+
                                 </div>
                                 <div id="avisos" class="col-md-4">
                                     <div class="scroll">
@@ -71,7 +86,7 @@
                                     <div class="scroll">
                                     </div>
                                 </div>
-                                
+
 
                             </div>
                         </div>

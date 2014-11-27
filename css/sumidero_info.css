@@ -26,7 +26,7 @@
     #avisos .scroll{
         width:350px;
         height:400px;
-        overflow:scroll;
+        overflow: scroll;
         background-color:green;
         color:#714D03;
         border:4px double green;
@@ -47,7 +47,17 @@
         color:#714D03;
         border:4px double brown;
     }
-    
+    .subAlert{
+        color: #222;
+  background: rgba(255,255,255,.9);
+  border-spacing: 2px;
+  border-color: gray;
+  font-family: arial,sans-serif;
+  border-bottom: 1px #e5e5e5 solid;
+    }
+    .descripcion{
+        display:none;
+    }
     
 
 .nav{
@@ -104,43 +114,7 @@
   font-weight: bold;
 }
 
-.jumbotron p {
+.jumbotron >p {
   font-size: 20px;
   color: #fff;
-}
-.sector{
-    background-color:#0066FF;
-    padding-left:5px;
-    padding-right:5px;
-    height:500;
-    width:width;
-    border:2px solid #0A0A66;
-    text-align:left;
-    }
-.sector h2{
-    margin-left:5px;
-}
-
-.sistema{
-    margin-top:10px;
-    background-color:#0066FF;
-    padding-left:5px;
-    padding-right:5px;
-    height:300;
-    width:width;
-    border:2px solid #0A0A66;
-}
-
-.learn-more {
-  background-color: #f7f7f7;
-}
-
-.learn-more h3 {
-  font-family: 'Shift', sans-serif;
-  font-size: 18px;
-  font-weight: bold;
-}
-
-.learn-more a {
-  color: #00b0ff;
 }
