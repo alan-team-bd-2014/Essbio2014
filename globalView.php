@@ -2,16 +2,22 @@
 <html>
 
     <head>
-
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-        <script src="js/globalView.js"></script>
-        <script src="js/sumidero-info.js"></script>
-        <!--<link href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/shift.css" rel="stylesheet">-->
         <link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
-
         <link rel="stylesheet" href="css/navigation.css">
         <link rel="stylesheet" href="css/fondo.css">
         <link rel="stylesheet" href="css/globalView.css">
+        
+        
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="js/globalView.js"></script>
+        <script src="js/sumidero-info.js"></script>
+        
+        <script>
+            function myFunction() {
+            var idSum = document.getElementById("idsum").textContent;
+            console.log(idSum);
+        }
+</script>
 
     </head>
 
@@ -19,12 +25,12 @@
         <div class="nav nav-pills">
             <div class="container">
                 <ul class="pull-left">
-                    <li class="active"><a href="#">Info </a></li>
+                    <li class="active"><a href="construccion.php">Info </a></li>
                     <!--<li><a href="#">Mapa </a></li>-->
                 </ul>
                 <ul class="pull-right">
                     <li class="dropdown">
-                        <a href="globalView.php" class="dropdown-toggle">globalview <b class="caret"></b></a>
+                        <a href="#" class="dropdown-toggle">globalview <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li><a class="sec">Sectores</a></li>
                             <li><a class="sis">Sistemas</a></li>
@@ -80,11 +86,16 @@
                                         $sizeSumidero = pg_num_rows($resultSumidero);
 
                                         for ($k = 0; $k < 6; $k++) {
+                                            $sumCount=0;
                                             $aSumidero = pg_fetch_row($resultSumidero);
-                                            echo"   <a href='sumidero_info.php' class='sum' method='POST' name='sumidero' val='$aSumidero[0]' ><div class='sumidero'>
+                                            
+                                            echo"   <a onclick='myFunction()' >
+                                                        <div class='sumidero'>
                                                             <div class='cuad'></div>
-                                                            <p><var>$aSumidero[0]</var></p>
-                                                    </div></a>";
+                                                            <p click='myFunction()' id='idsum'>$aSumidero[$sumCount]</p>
+                                                        </div>
+                                                    </a>";
+                                            $sumCount++;
                                         }
                                         echo"</ul>
                                             </div>

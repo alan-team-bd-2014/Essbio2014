@@ -18,12 +18,12 @@
         <div class="nav nav-pills">
             <div class="container">
                 <ul class="pull-left">
-                    <li class="active"><a href="bajo-construccion.html">Info </a></li>
+                    <li class="active"><a href="construccion.php">Info </a></li>
                     <!--<li><a href="#">Mapa </a></li>-->
                 </ul>
                 <ul class="pull-right">
-                    <li><a href="login.php">Login </a></li> 
-                    <li><a href="bajo-construccion.html">Guia </a></li> 
+                    <li><a href="index.php">Login </a></li> 
+                    <li><a href="construccion.php">Guia </a></li> 
                 </ul>
             </div>
         </div>
@@ -53,10 +53,27 @@
                                         <li>Email:</li><li><input type="text" name="email" /></li>  
                                         <li>Clave:</li><li><input type="text" name="clave" /></li>
                                         <li>Confirmar Clave:</li><li><input type="text" name="clave_confirm" /></li>
-                                        <li>Calle:</li><li><input type="text" name="calle" /></li>
-                                        <li>Numero Calle:</li><li><input type="text" name="num_calle" /></li>  
-                                        <li>Codigo Admin:</li><li><input   value="0000" type="text" name="admin_cod" /></li>  
+                                        <li>Codigo Admin:</li><li><input value="0000" type="text" name="admin_cod" /></li>  
+                                        <li>Nro Calle:</li><li><input value="" type="text" name="nroCalle" /></li>
+                                        <?php
+                                        $dbconn = pg_connect("host=plop.inf.udec.cl port=5432 dbname=BDI-g user=BDI-7 password=bdi7")
+                                                    or die('No se ha podido conectar: ');
+                                        $query2 = "SELECT DISTINCT(s.calle) FROM essbio.sumidero as s";
+                                        $result2 = pg_query($query2) or die('El registro fallo: ' . pg_last_error());
 
+                                        $sizeResult2 = pg_num_rows($result2);
+                                            
+                                            echo"<li><label for='comment' >Calle</label></li>\n
+                                                <select id='alertaProblema' name='calle' >";
+                                            echo"<li><option value=''>Calles</option><li>
+                                                <option value='--Any--'>--Any--</option>";
+                                            $i = 0;
+                                            while ($i < $sizeResult2) {
+                                                $row = pg_fetch_row($result2);
+                                                echo " <li><option value='$row[0]'>$row[0]</option></li>";
+                                                $i++;
+                                            }
+                                        ?>
                                         <li><input type="submit" /></li>  
                                     </form> 
                                 </div>

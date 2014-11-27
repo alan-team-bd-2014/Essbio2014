@@ -18,13 +18,13 @@ session_start();
         <div class="nav nav-pills">
             <div class="container">
                 <ul class="pull-left">
-                    <li class="active"><a href="bajo-construccion.html">Info </a></li>
+                    <li class="active"><a href="construccion.php">Info </a></li>
                     <!--<li><a href="#">Mapa </a></li>-->
                 </ul>
                 <ul class="pull-right">
                     <li><a href="welcome_usuario.php">Home </a></li>
                     <li><a href="verificar_logOut.php">Log Out </a></li>
-                    <li><a href="bajo-construccion.html">Profile</a></li>
+                    <li><a href="construccion.php">Profile</a></li>
                 </ul>
             </div>
         </div>

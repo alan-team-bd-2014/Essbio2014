@@ -17,12 +17,12 @@ session_start();
         <div class="nav nav-pills">
             <div class="container">
                 <ul class="pull-left">
-                    <li class="active"><a href="bajo-construccion.html">Info </a></li>
+                    <li class="active"><a href="construccion.php">Info </a></li>
                     <!--<li><a href="#">Mapa </a></li>-->
                 </ul>
                 <ul class="pull-right">
-                    <li><a href="login.php">Login </a></li> 
-                    <li><a href="bajo-construccion.html">Guia </a></li> 
+                    <li><a href="index.php">Login </a></li> 
+                    <li><a href="construccion.php">Guia </a></li> 
                 </ul>
             </div>
         </div>
