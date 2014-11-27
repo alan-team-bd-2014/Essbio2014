@@ -12,7 +12,7 @@ session_unset();
 // destroy the session 
 session_destroy(); 
 
-header('Location: index.html')
+header('Location: login.php')
 ?>
 
 </body>

@@ -2,6 +2,13 @@
 session_start();
 ?>
 
+<?php
+
+    if($_SESSION["usuario"] != null && $_SESSION["pwd"] !=null){
+        header('Location: welcome_usuario.php');
+    }
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -13,19 +20,17 @@ session_start();
     <link rel="stylesheet" href="css/btnAvisoAlerta.css">
     <link rel="stylesheet" href="css/navigation.css">
     
+    
   </head>
 
   <body>
     <div class="nav nav-pills">
       <div class="container">
         <ul class="pull-left">
-          <li class="active"><a href="#">Info </a></li>
-          <!--<li><a href="#">Mapa </a></li>-->
         </ul>
         <ul class="pull-right">
-            <li><a href="welcome_usuario.php">Home </a></li>
-            <li><a href="verificar_logOut.php">Log Out </a></li>
-          <li><a href="#">Profile</a></li>
+           <li class="active"><a href="#">Info </a></li>
+          <li><a href="registro.php">Guia </a></li> 
         </ul>
       </div>
     </div>
@@ -35,22 +40,36 @@ session_start();
       <div class="container">
         <h1>Sistema de Informacion</h1>
         <h2>colectores aguas lluvia</h2>
+        <!--<p>Rent from people in over 34,000 cities and 192 countries.</p>
+        <a href="#">Learn More</a>
+        -->
         <div id="botones">
         <div class="container">
             <div class="row">
-                <div class="col-md-6">
-                    <a href="mi_sumidero.php">
-                        <div class="btn">
-                            <h1>Mi Sumidero</h1>
-                        </div>
-                    </a>
+                <div class="col-md-4">
+                    <div>
+                        
+                    </div>
+                    
                 </div>
-                <div class="col-md-6">
-                    <a href="otro_sumidero.php">
-                        <div class="btn">
-                            <h1>Otro Sumidero</h1>
-                        </div>
-                    </a>
+                <div class="col-md-4">
+                    <div class="btn">
+                        <h3>Inicia Sesion</h3>
+                        <form method="POST" action="verificar_usuario.php">
+                            <ul>
+                                <li><label for="usuario" >Usuario</label></li>
+                                <li><input type= "textbox" value="" name= "usuario"/> </li>
+                                <li><label for="pass" name="pwd" >Constrasenia</label></li>
+                                <li><input type= "password" value="" name= "pwd"/></li>
+                                <li><input type="submit" /></li> 
+                            </ul>
+                        </form>
+                        <a href="registro.php">registro</a>
+                        <a href=""></a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div >
                     </div>
                 </div>
             </div>

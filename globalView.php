@@ -2,14 +2,16 @@
 <html>
 
     <head>
-
-        <link href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/shift.css" rel="stylesheet">
-        <link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
         
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="js/globalView.js"></script>
+        <!--<link href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/shift.css" rel="stylesheet">-->
+        <link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
+
         <link rel="stylesheet" href="css/navigation.css">
         <link rel="stylesheet" href="css/fondo.css">
-        <link rel="stylesheet" href="css/sumidero.css">
-           
+        <link rel="stylesheet" href="css/globalView.css">
+
     </head>
 
     <body>
@@ -20,7 +22,7 @@
                     <!--<li><a href="#">Mapa </a></li>-->
                 </ul>
                 <ul class="pull-right">
-                    <li><a href="sumideros.php">Sumideros </a></li>
+                    <li><a href="sumideros.php">globalview </a></li>
                     <li><a href="consulta.php">Consultas </a></li>
                     <li><a href="problemas.php">problemas</a></li>
                     <li><a href="filtros.php">Filtros</a></li>
@@ -38,7 +40,7 @@
                     <div class="container">
                         <div class="row">
                             <div>
-                                
+
                                 <?php
                                 $dbconn = pg_connect("host=plop.inf.udec.cl port=5432 dbname=BDI-g user=BDI-7 password=bdi7")
                                         or die('No se ha podido conectar: ');
@@ -46,42 +48,45 @@
                                 $resultSector = pg_query($querySector) or die('El registro fallo: ' . pg_last_error());
                                 $sizeSector = pg_num_rows($resultSector);
 
-                                for($i = 0; $i < $sizeSector; $i++){
+                                for ($i = 0; $i < $sizeSector; $i++) {
                                     $aSector = pg_fetch_row($resultSector);
-                                echo"<div class='sector'>
+                                    echo"<div class='sector'>
                                     <a><h2>Sector:$aSector[0]</h2></a>
                                     <div>";
-                                
+
                                     $querySistema = "SELECT s.num_sistema FROM essbio.sistema as s WHERE s.num_sector = '$aSector[0]' ";
                                     $resultSistema = pg_query($querySistema) or die('El registro fallo: ' . pg_last_error());
                                     $sizeSistema = pg_num_rows($resultSistema);
-                                    
-                                        for($j = 0; $j < $sizeSistema; $j++){
-                                            $aSistema = pg_fetch_row($resultSistema);
+
+                                    for ($j = 0; $j < $sizeSistema; $j++) {
+                                        $aSistema = pg_fetch_row($resultSistema);
                                         echo"
                                          <div class='sistema'>
                                             
                                             <a><h3>Sistema:$aSistema[0]</h3></a>
                                             <div>
                                                 <ul>";
-                                            $querySumidero = "SELECT s.id_sumidero FROM essbio.sumidero as s WHERE s.num_sistema = '$aSistema[0]'";
-                                            $resultSumidero = pg_query($querySumidero) or die('El registro fallo: ' . pg_last_error());
-                                            $sizeSumidero = pg_num_rows($resultSumidero);
-                                                
-                                                    for($k = 0; $k < 6; $k++){
-                                                        $aSumidero = pg_fetch_row($resultSumidero);
-                                                    echo"<div class='sumidero'><a class='pagina_sumidero'>
-                                                        <div class='cuad'></div>
-                                                        <p>$aSumidero[0]</p></a>
+                                        $querySumidero = "SELECT s.id_sumidero FROM essbio.sumidero as s WHERE s.num_sistema = '$aSistema[0]'";
+                                        $resultSumidero = pg_query($querySumidero) or die('El registro fallo: ' . pg_last_error());
+                                        $sizeSumidero = pg_num_rows($resultSumidero);
+
+                                        for ($k = 0; $k < 6; $k++) {
+                                            $aSumidero = pg_fetch_row($resultSumidero);
+                                            echo"   <div class='sumidero'>
+                                                        <a class='pagina_sumidero'>
+                                                            <div class='cuad'></div>
+                                                            <p><var>$aSumidero[0]</var></p>
+                                                        </a>
                                                     </div>";
-                                                    }
-                                                echo"</ul>
+                                        }
+                                        echo"</ul>
                                             </div>
                                         </div>";
-                                        }
+                                    }
                                     echo"</div>
                                     </div>";
-                                 }?>      
+                                }
+                                ?>      
                             </div>
 
                         </div>
@@ -93,7 +98,7 @@
 
 
 
-        <div class="learn-more">
+        <!--<div class="learn-more">
             <div class="container">
                 <div class="row">
 
@@ -116,6 +121,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div>-->
+        
     </body>
 </html>

@@ -1,6 +1,12 @@
 <?php
-// Start the session
 session_start();
+?>
+
+<?php
+
+    if($_SESSION["usuario"] != null && $_SESSION["pwd"] !=null){
+        header('Location: welcome_usuario.php');
+    }else break;
 ?>
 
 <!DOCTYPE html>
